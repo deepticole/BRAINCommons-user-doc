@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>6. Submit and validate project metadata tsvs - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "6. Submit and validate project metadata tsvs";
+    var mkdocs_page_input_path = "data-contribution/6-submit-meta.md";
+    var mkdocs_page_url = "/gen3-user-doc/data-contribution/6-submit-meta/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-analysis/">Data Analysis</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Appendices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api-gen3/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/timepoints/">Managing Timepoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>6. Submit and validate project metadata tsvs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="6-submit-and-validate-project-metadata-tsvs">6. Submit and validate project metadata tsvs<a class="headerlink" href="#6-submit-and-validate-project-metadata-tsvs" title="Permanent link"></a></h1>
+<h2 id="begin-your-submission">Begin your submission<a class="headerlink" href="#begin-your-submission" title="Permanent link"></a></h2>
+<p>From the submission portal select the project for which you wish to submit metadata.   Remembering the order in which you need to submit your tsvs (see <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/413155">step 5, Determine Submission Order</a> for details) begin your submission by uploading or copying in your first tsv (likely "experiment.tsv").   NOTE:   If you would prefer submitting nodes in json to tsv the submission portal also accepts json.  </p>
+<blockquote>
+<p>To get you started, the first node - "project" has already been created for you.</p>
+</blockquote>
+<p>Now you should see a lot of details about the submission process. At the very bottom, you should be able to immediately get a grasp of how the submission went with the following fields:</p>
+<pre><code>{'entity_error_count': 0,
+'message': 'Transaction successful.',
+'success': True,
+'transaction_id': 403,
+'transactional_error_count': 0,
+'transactional_errors': [],
+'updated_entity_count': 40}
+</code></pre>
+
+<p>Specifically, the message and success fields should provide you with whether your submission was valid and went through. If you see anything other than success, check the other fields for any information on what went wrong with the submission. The most descriptive information will be found in the individual entity transaction logs. Each line in the TSV will have its own output with the following attributes:</p>
+<pre><code>{'action': 'update',
+ 'errors': [],
+ 'id': 'asdf21as-2q4a-2563-213k-8dn4kg8dsb3j',
+ 'related_cases': [],
+ 'type': 'case',
+ 'unique_keys': [{'project_id': 'bpa-MyGroup_P0001_T1'
+   'submitter_id': u'BPA_MG_P0001_EX1_C1'}],
+ 'valid': True,
+ 'warnings': []},
+</code></pre>
+
+<p>On a successful submission, the API will return something like above. The action can be used to identify if the node was created new or just updated. Other useful information includes the id for the node. This is the UUID for the submission and is unique for the node throughout the entirety of the Gen3 Commons. The other unique_key provided is the tuple project_id and submitter_id; another way of saying that the submitter_id combined with the project_id is a universal identifier for this node.</p>
+<h2 id="troubleshooting-and-finishing-your-submission">Troubleshooting and finishing your submission<a class="headerlink" href="#troubleshooting-and-finishing-your-submission" title="Permanent link"></a></h2>
+<p>If, against all odds, your submission is perfect on the first try, you are finished with submission of that node, and you can move on to the next node. However, if the submission throws errors or claims your submission to be invalid, you will need to fix your submission.
+&nbsp;
+The best first step is to go through the outputs from the individual entities. In the errors field will be a rough description of what tripped our validation check. The most common problems are simple issues such as spelling errors or mislabeled fields. 
+&nbsp;
+Other errors include the one I mentioned earlier about submitting out of order and errors from not adhering to valid values as defined in our dictionary.
+&nbsp;
+If you don't receive any output it usually means your TSV is invalid and must be edited.
+&nbsp;</p>
+<h3 id="submission-failure-example">Submission Failure Example<a class="headerlink" href="#submission-failure-example" title="Permanent link"></a></h3>
+<p><img alt="Submission Failure Example" src="http://g.recordit.co/Q9mb2wNCN8.gif" /></p>
+<h3 id="alternative-in-beta-form-submission">ALTERNATIVE in BETA:  Form submission<a class="headerlink" href="#alternative-in-beta-form-submission" title="Permanent link"></a></h3>
+<p>Using tsvs allows users to bulk submit their metadata.   This is ultimately a much faster process for users with larger datasets.   If you wish, you can also use form submission to insert properties into a node.   </p>
+<p>NOTE:   if you use the same submitter ID, and submit again to the same node, it will overwrite properties.   Be sure to change it should you choose to use form submission multiple times on a given node.   </p>
+<p>NOTE2:   it is not currently possible to remove values submitted in error using the form submission method.</p>
+<p>${image?fileName=formSubmission%2Egif&amp;align=None&amp;scale=100&amp;responsive=true}</p>
+<h3 id="query-the-api">Query the API<a class="headerlink" href="#query-the-api" title="Permanent link"></a></h3>
+<p>If helpful you can use query the API in the submission portal to confirm or correct your submission, to delete nodes, or to submit json queries to learn more about your submission or all the data in the commons.   To learn more visit the API section of the wiki:<br />
+https://www.synapse.org/#!Synapse:syn8011461/wiki/415875</p>
+<h3 id="check-the-commons-matrices">Check the commons matrices<a class="headerlink" href="#check-the-commons-matrices" title="Permanent link"></a></h3>
+<p>Read <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/415875">"What's an example of the API at work?"</a> to learn more about how the <a href="https://www.bloodpac.org/data-group/">data matrices</a> work.   Suffice to say, you can check them hourly to see relevant metadata you submit appear!</p>
+<h3 id="provide-feedback">Provide feedback<a class="headerlink" href="#provide-feedback" title="Permanent link"></a></h3>
+<p>You may receive errors for what you think is a valid submission. If you feel what you have provided for a particular entity is valid, please contact the Gen3 support team at gen3-support@occ-data.org. We will be happy to accommodate any necessary changes. We can always add new nodes, properties, or values.</p>
+<h3 id="let-us-know-submission-is-complete">Let us know submission is complete<a class="headerlink" href="#let-us-know-submission-is-complete" title="Permanent link"></a></h3>
+<p>Please contact the Gen3 support team to let us know when your submission is complete. </p>
+<h3 id="submission-faq">Submission FAQ<a class="headerlink" href="#submission-faq" title="Permanent link"></a></h3>
+<h4 id="how-do-i-know-my-submission-was-accepted">How do I know my submission was accepted?<a class="headerlink" href="#how-do-i-know-my-submission-was-accepted" title="Permanent link"></a></h4>
+<p>You will see this within the json output: </p>
+<pre><code>'message': 'Transaction successful.',
+'success': True,
+</code></pre>
+
+<h4 id="how-can-i-learn-more-about-the-elements-of-my-existing-submission">How can I learn more about the elements of my existing submission?<a class="headerlink" href="#how-can-i-learn-more-about-the-elements-of-my-existing-submission" title="Permanent link"></a></h4>
+<p>When you are viewing a project, there is a "browse nodes" feature.   From here you can download, view, or completely delete the tsvs associated with any project you have write access to.</p>
+<h4 id="what-happens-if-i-need-to-resubmit-a-tsv-that-was-already-accepted">What happens if i need to resubmit a tsv that was already accepted?<a class="headerlink" href="#what-happens-if-i-need-to-resubmit-a-tsv-that-was-already-accepted" title="Permanent link"></a></h4>
+<p>When you resubmit (aka submit to a node with the same submitter id), you will update the existing node. 
+&nbsp;
+For example, if you submit a sample with <code>sample_type</code>, <code>composition</code>, and <code>tube_type</code>, and you later realize that the tube type was wrong for that submission, if you were to resubmit a tsv that has just the <code>submitter_id</code> and <code>tube_type</code> it will overwrite ONLY the tube type. The <code>sample_type</code> and composition from the previous submission will still be in the database.  What this means is that if you had previously submitted something you DON'T want, like say you realize that you accidentally submitted the <code>tube_type</code> as <code>method_of_sample_procurement</code>, simply renaming the header in your TSV would not overwrite the existing data in the node.  You would need to submit null/empty values for <code>method_of_sample_procurement</code> to get rid of it.</p>
+<h4 id="i-was-part-of-the-very-first-submission-group-in-novdec-2016-when-we-added-tsvs-directly-into-an-object-store-where-is-the-projectsubmitter_id-field">I was part of the very first submission group, in Nov/Dec 2016 when we added TSVs directly into an object store.   Where is the <code>project.submitter_id</code> field?<a class="headerlink" href="#i-was-part-of-the-very-first-submission-group-in-novdec-2016-when-we-added-tsvs-directly-into-an-object-store-where-is-the-projectsubmitter_id-field" title="Permanent link"></a></h4>
+<p><code>projects.submitter_id</code> has become <code>projects.code</code> now.   SO:</p>
+<p>EXAMPLE:
+<em> <code>program.name</code> = 'bpa'
+</em> <code>project.code</code> ='MyOrg_P0001_T1'
+* <code>project_id</code> = <code>program.name</code> + '-' + <code>project.code</code> = 'bpa-MyOrg_P0001_T1'</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -13,25 +13,26 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Working with the API";
     var mkdocs_page_input_path = "appendices/api-gen3.md";
-    var mkdocs_page_url = "/appendices/api-gen3/";
+    var mkdocs_page_url = "/gen3-user-doc/appendices/api-gen3/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-27795084-5', 'mkdocs.org');
       ga('send', 'pageview');
@@ -49,7 +50,7 @@
         <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -183,7 +184,7 @@
 <hr />
 <h2 id="what-does-the-api-do">What does the API do?<a class="headerlink" href="#what-does-the-api-do" title="Permanent link"></a></h2>
 <hr />
-<p>The API is created programmatically based on the <a href="https://github.com/occ-data/datadictionary">Gen3 commons data model</a>.   All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps <a href="../../user-guide/data-contribution/#4-prepare-metadata-that-fits-the-data-model">4-6 in the Data Contribution section</a>).   </p>
+<p>The API is created programmatically based on the <a href="https://github.com/occ-data/datadictionary">Gen3 commons data model</a>.   All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps <a href="/user-guide/data-contribution/#4-prepare-metadata-that-fits-the-data-model">4-6 in the Data Contribution section</a>).   </p>
 <p>With the API in place, users can submit queries to find whatever metadata information they might like across the Gen3 commons.   The API can be queried programmatically or through provided tools like the submission portal.  </p>
 <p>We use <a href="http://graphql.org/">GraphQL</a> to manage the metadata in the Gen3 commons.  To learn the basics of writing queries in Graph QL, we recommend <a href="http://graphql.org/learn/">this introduction</a>.</p>
 <hr />
@@ -198,11 +199,11 @@
 <p>Each API key is valid for a month and is used to receive a temporary access token that is valid for only 30 minutes. The access token is what must be sent to the Gen3 API to access data in the commons.</p>
 <p>For users granted data access, the API key is provided on your Profile page when you click "Create API key".</p>
 <hr />
-<p><img alt="Profile Page" src="../../img/profile-page.png" /></p>
+<p><img alt="Profile Page" src="/img/profile-page.png" /></p>
 <hr />
 <p>While displayed, you can click "copy" to copy the API key to your clipboard or "download" to download a "credentials.json" file containing the id/key pair in json format.</p>
 <hr />
-<p><img alt="Copy Key" src="../../img/copy-keys.png" /></p>
+<p><img alt="Copy Key" src="/img/copy-keys.png" /></p>
 <hr />
 <p>In python, the following command is sent, using the module "requests", to receive the access token:</p>
 <pre><code># Save your copied credentials.json from the website into a variable &quot;key&quot;:
@@ -242,7 +243,7 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
 <h2 id="queries-in-the-submission-portal-graphql">Queries in the submission portal:   graphQL<a class="headerlink" href="#queries-in-the-submission-portal-graphql" title="Permanent link"></a></h2>
 <hr />
 <p>You can run queries directly in the submission portal by clicking the "Query" magnifying glass or directly at: <a href="https://data.gen3.org/graphql">https://data.gen3.org/graphql</a>. Queries are essential as you begin analyses. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.</p>
-<p><img alt="GraphQL Query" src="../../img/gQL-query.gif" /></p>
+<p><img alt="GraphQL Query" src="/img/gQL-query.gif" /></p>
 <h3 id="pagination-and-offsets-default-first-10-entries">Pagination and Offsets:   Default = first 10 entries<a class="headerlink" href="#pagination-and-offsets-default-first-10-entries" title="Permanent link"></a></h3>
 <p>Queries by defult return the first 10 entries. If you want more than that, you can specify it in the query call: <code>(first:1000)</code></p>
 <p>In the case that too many results are returned, you may receive a timeout error. In that case, you may want to use <a href="http://graphql.org/learn/pagination/">pagination</a>. For example, if there are 2,550 records returned, and your graphiQL query is timing out with <code>(first:3000)</code>, then break your query into multiple queries with offsets:</p>
@@ -251,7 +252,7 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
 (first:1000, offset:2000)   # this will return records 2000-2,550
 </code></pre>
 
-<p>Updating the example template <a href="../../assets/details_from_experiment.json"><code>details from experiment</code></a> sample query to call the first 1000, the call becomes:  </p>
+<p>Updating the example template <a href="/assets/details_from_experiment.json"><code>details from experiment</code></a> sample query to call the first 1000, the call becomes:  </p>
 <pre><code>{
     &quot;query&quot;:&quot; query Test {
         experiment (first:1000, submitter_id: &quot;&lt;INSERT submitter_id&gt;&quot;) {  
@@ -271,7 +272,7 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
 <p>The metadata submission portal <a href="https://data.gen3.org/">https://data.gen3.org/</a> can be used to browse an individual submission by node.   Just select a project and then click the "browse nodes" button to the right.    From there, you'll get a screen like below where you can query by node in the dropdown at the left.</p>
 <h4> Example:  Browse by node </h4>
 
-<p><img alt="Browse by node" src="../../img/browse-by-node.png" /></p>
+<p><img alt="Browse by node" src="/img/browse-by-node.png" /></p>
 <p>You can also use this feature to download the tsv associated with the node, or if you have "write" access to the this project, delete existing nodes.   </p>
 <hr />
 <h2 id="graphing-a-project">Graphing a project<a class="headerlink" href="#graphing-a-project" title="Permanent link"></a></h2>
@@ -279,7 +280,7 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
 <p>You can also review a graph of an individual project, toggling between views of the completed nodes and the full graph.  </p>
 <h5> Example:  Graphing a project </h5>
 
-<p><img alt="Graphing a project" src="../../img/graph-a-project.gif" /></p>
+<p><img alt="Graphing a project" src="/img/graph-a-project.gif" /></p>
               
             </div>
           </div>
@@ -328,9 +329,8 @@ u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=ts
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

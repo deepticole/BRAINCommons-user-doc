@@ -13,25 +13,26 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Data Analysis";
     var mkdocs_page_input_path = "user-guide/data-analysis.md";
-    var mkdocs_page_url = "/user-guide/data-analysis/";
+    var mkdocs_page_url = "/gen3-user-doc/user-guide/data-analysis/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
   <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-27795084-5', 'mkdocs.org');
       ga('send', 'pageview');
@@ -49,7 +50,7 @@
         <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -185,22 +186,22 @@
 <h2 id="jupyterhub-using-windmills-workspace">JupyterHub: Using Windmill's Workspace<a class="headerlink" href="#jupyterhub-using-windmills-workspace" title="Permanent link"></a></h2>
 <hr />
 <p>The Windmill data portal may provide a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
-<img alt="Data portal Workspace button" src="../../img/workspace_button.png" /></p>
+<img alt="Data portal Workspace button" src="/img/workspace_button.png" /></p>
 <p>Click "Start My Server" to start the Jupyter server in your Workspace:
-<img alt="Start Server" src="../../img/start_server.png" /></p>
+<img alt="Start Server" src="/img/start_server.png" /></p>
 <p>Or if a server is already running, click on "My Server" to access your files.
-<img alt="Workspace home" src="../../img/my_server.png" /></p>
+<img alt="Workspace home" src="/img/my_server.png" /></p>
 <p>The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.</p>
 <p>After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" icon or "File" and then "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
-<img alt="Upload Save Download Notebook" src="../../img/upload_save_download.gif" /></p>
+<img alt="Upload Save Download Notebook" src="/img/upload_save_download.gif" /></p>
 <p>The following clip illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named "Gen3_authentication.ipynb":
-<img alt="Python Notebook" src="../../img/authentication.gif" /></p>
+<img alt="Python Notebook" src="/img/authentication.gif" /></p>
 <p>This clip demonstrates creating a new Jupyter notebook in the R language:
-<img alt="Python Notebook" src="../../img/R_jupyter_notebook_workspace.gif" /></p>
+<img alt="Python Notebook" src="/img/R_jupyter_notebook_workspace.gif" /></p>
 <p>Terminal sessions can also be started in the Workspace and used to download other tools.
-<img alt="Terminal Session" src="../../img/terminal_session.gif" /></p>
+<img alt="Terminal Session" src="/img/terminal_session.gif" /></p>
 <p>You can manage active Notebook and terminal processes by clicking on "Running". Clicking "shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks before terminating them.
-<img alt="Manage Running Sessions" src="../../img/running.gif" /></p>
+<img alt="Manage Running Sessions" src="/img/running.gif" /></p>
 <hr />
 <h2 id="running-a-jupyter-server-on-a-virtual-machine-vm">Running a Jupyter server on a virtual machine (VM)<a class="headerlink" href="#running-a-jupyter-server-on-a-virtual-machine-vm" title="Permanent link"></a></h2>
 <hr />
@@ -253,17 +254,17 @@ unset https_proxy;
 </code></pre>
 
 <blockquote>
-<p>NOTE:   In the example above "analysis" is the name of the ssh shortcut we <a href="../../user-guide/data-access/#2-ssh-to-virtual-machine-config">setup back in step 2</a>.</p>
+<p>NOTE:   In the example above "analysis" is the name of the ssh shortcut we <a href="/user-guide/data-access/#2-ssh-to-virtual-machine-config">setup back in step 2</a>.</p>
 </blockquote>
 <h2 id="access-the-notebook-in-via-browser">Access the notebook in via browser<a class="headerlink" href="#access-the-notebook-in-via-browser" title="Permanent link"></a></h2>
 <p>In your preferred browser and enter http://localhost:8888/;   Then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.</p>
 <h5> Example:   Run Server, port forward, access notebook in browser</h5>
 
-<p><img alt="Jupyter notebook example" src="../../img/jupyter.gif" /></p>
+<p><img alt="Jupyter notebook example" src="/img/jupyter.gif" /></p>
 <h2 id="review-and-follow-the-notebook">Review and follow the notebook<a class="headerlink" href="#review-and-follow-the-notebook" title="Permanent link"></a></h2>
 <h4> Credentials </h4>
 
-<p>The notebook makes use of both a <a href="../../appendices/api/#secrets-credentials-to-query">.secrets file</a> that came preloaded in your VM in the home directory that lets you query the metadata API from the VM, and the <a href="../../user-guide/data-access/#4-access-raw-data-storage-from-virtual-machine">s3 profile you created</a> to pull 'raw' data into your VM for analysis.</p>
+<p>The notebook makes use of both a <a href="/appendices/api/#secrets-credentials-to-query">.secrets file</a> that came preloaded in your VM in the home directory that lets you query the metadata API from the VM, and the <a href="/user-guide/data-access/#4-access-raw-data-storage-from-virtual-machine">s3 profile you created</a> to pull 'raw' data into your VM for analysis.</p>
 <p>The first thing you'll want to do is update the "profile" variable in the first cell to whatever the name of your s3 profile is.       </p>
 <blockquote>
 <p>NOTE:  If you have forgotten what you called your profile, you can always take a look at the credential file to review.  From the VM run:  <code>vi ~/.aws/credentials</code>.  </p>
@@ -325,9 +326,8 @@ unset https_proxy;
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>1. Send credentials and get welcome email - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "1. Send credentials and get welcome email";
+    var mkdocs_page_input_path = "data-access/1-send-cred.md";
+    var mkdocs_page_url = "/gen3-user-doc/data-access/1-send-cred/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-analysis/">Data Analysis</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Appendices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api-gen3/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/timepoints/">Managing Timepoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>1. Send credentials and get welcome email</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="1-send-credentials-and-get-welcome-email">1. Send credentials and get welcome email<a class="headerlink" href="#1-send-credentials-and-get-welcome-email" title="Permanent link"></a></h1>
+<h2 id="send-ssh-key-and-oauth-to-gen3-commons-team">Send SSH Key and Oauth to Gen3 commons team.<a class="headerlink" href="#send-ssh-key-and-oauth-to-gen3-commons-team" title="Permanent link"></a></h2>
+<p>To access the VPC, users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to Gen3-support@datacommons.io.   </p>
+<blockquote>
+<p>NOTE:   Do not send your private ssh key.   This is confidential and should never be shared with anyone.  </p>
+</blockquote>
+<p>The pubkey will be used to access the login node and any VMs setup for the user.    The email will be used to permit access to:</p>
+<ul>
+<li><a href="http://bionimbus-pdc.opensciencedatacloud.org/storage/">Bionimbus</a> to receive s3 data storage credentials</li>
+<li><a href="https://data.Gen3.org/">data.Gen3.org</a> for browser based querying of metadata. </li>
+</ul>
+<blockquote>
+<p>NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and data.Gen3.org.   Just send your pubkey.  </p>
+</blockquote>
+<h3 id="im-not-familiar-with-ssh-how-do-i-generate-a-keypair">I'm not familiar with SSH - how do I generate a keypair?<a class="headerlink" href="#im-not-familiar-with-ssh-how-do-i-generate-a-keypair" title="Permanent link"></a></h3>
+<p><a href="https://help.github.com/articles/connecting-to-github-with-ssh/">Github has a very nice tutorial</a> with step by step instructions for Mac, Windows (users with gitbash installed), and Linux users.   If you're new to using SSH we'd recommend reviewing the links:
+<em> <a href="https://help.github.com/articles/about-ssh/">About SSH</a>
+</em> <a href="https://help.github.com/articles/checking-for-existing-ssh-keys/">Checking for Existing SSH Keys</a>
+* <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Generating a new SSH key and adding it to the SSH Agent</a>
+&nbsp;</p>
+<blockquote>
+<p>NOTE:  For Windows users, we recommend installing <a href="https://git-for-windows.github.io/">Git for Windows</a> and using the Git Bash feature to interact on the command line, manage ssh keys, and s3 credentials.   </p>
+</blockquote>
+<h2 id="receive-a-welcome-email">Receive a welcome email<a class="headerlink" href="#receive-a-welcome-email" title="Permanent link"></a></h2>
+<p>Gen3 members with the appropriate signed legal documents will be sent an email that gives the following unique information: </p>
+<ul>
+<li>username (this is used to ssh to the VPC login node) - eg:  <code>ssh -A &lt;username&gt;@34.197.164.18</code></li>
+<li>an IP associated with your new VM</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

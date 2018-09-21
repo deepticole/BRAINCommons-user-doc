@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>2. SSH to Virtual Machine: config - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2. SSH to Virtual Machine: config";
+    var mkdocs_page_input_path = "data-access/2-ssh.md";
+    var mkdocs_page_url = "/gen3-user-doc/data-access/2-ssh/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-analysis/">Data Analysis</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Appendices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api-gen3/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/timepoints/">Managing Timepoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>2. SSH to Virtual Machine: config</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="2-ssh-to-virtual-machine-config">2. SSH to Virtual Machine: config<a class="headerlink" href="#2-ssh-to-virtual-machine-config" title="Permanent link"></a></h1>
+<h2 id="how-will-i-access-the-login-node-and-my-virtual-machine-vm">How will I access the Login Node and my Virtual Machine (VM)?<a class="headerlink" href="#how-will-i-access-the-login-node-and-my-virtual-machine-vm" title="Permanent link"></a></h2>
+<p>Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the VPC, visit: https://www.synapse.org/#!Synapse:syn8011461/wiki/414186
+&nbsp; </p>
+<p>In your <a href="https://cgmeyer.github.io/gen3-user-doc/Data%20Access/1sendcred.html">welcome email</a> you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:</p>
+<ol>
+<li>SSH to login node:   <code>ssh -A &lt;username&gt;@34.197.164.18</code></li>
+<li>SSH from login node to your VM:  <code>ssh -A ubuntu@&lt;my_VM_ip&gt;</code></li>
+</ol>
+<blockquote>
+<p>NOTE 1:   34.197.164.18 is the IP for the login node.   This is unlikely to change. <br />
+NOTE 2:  the <code>-A</code> flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/414183">previous step</a>.
+NOTE 3:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  </p>
+</blockquote>
+<p>Advanced users can manage these connections however they see fit.   For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel.  To 'multihop' in this context is to use a single command to get to your VM.    What follows are instructions for updating your <code>.ssh/config</code> file to get to your VM in a single command.</p>
+<h2 id="setting-up-an-ssh-config-for-multihop">Setting up an ssh config for 'multihop'<a class="headerlink" href="#setting-up-an-ssh-config-for-multihop" title="Permanent link"></a></h2>
+<p>To start, go to your .ssh directory in your laptop home directory.</p>
+<pre><code>cd ~/.ssh
+</code></pre>
+
+<p>If this directory does not exist, make one.</p>
+<pre><code>mkdir -p ~/.ssh
+cd ~/.ssh
+</code></pre>
+
+<p>Within this directory create a file named "config" [Note: I use vim here but any text editor will do]:</p>
+<pre><code>vim config
+</code></pre>
+
+<p>In this file you can specify various hosts for access via ssh. Your host for the BPA head node should look something like this:</p>
+<pre><code>Host BPA
+    Hostname 34.197.164.18
+    User YOUR_USERNAME
+    IdentityFile /path/to/YOUR_CREDFILE
+    ForwardAgent yes
+</code></pre>
+
+<p>The username will be provided to you by the BloodPAC support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the BloodPAC head-node using this host:</p>
+<pre><code>ssh BPA
+</code></pre>
+
+<p>Exit the BPA head node and return to your local machine. Back in your config file, add a new host for the BPA submission VM:</p>
+<pre><code>Host analysis
+    Hostname YOUR_VM_IP
+    User ubuntu
+    ProxyCommand ssh -q -AXY BPA -W %h:%p
+</code></pre>
+
+<p>Once again you will receive the Hostname IP from the BloodPAC support team in step 4.  This host will route you through the BPA head node and take you directly to your personal BloodPAC analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:</p>
+<p>```
+ssh analysis
+````</p>
+<p>If you've done everything correctly, you should now be in the analysis VM.  </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

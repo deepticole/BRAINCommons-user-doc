@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>7. Get and configure s3 data storage credentials - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "7. Get and configure s3 data storage credentials";
+    var mkdocs_page_input_path = "data-contribution/7-s3-cred.md";
+    var mkdocs_page_url = "/gen3-user-doc/data-contribution/7-s3-cred/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-analysis/">Data Analysis</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Appendices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api-gen3/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/timepoints/">Managing Timepoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>7. Get and configure s3 data storage credentials</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="7-get-and-configure-s3-data-storage-credentials">7. Get and configure s3 data storage credentials<a class="headerlink" href="#7-get-and-configure-s3-data-storage-credentials" title="Permanent link"></a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link"></a></h2>
+<p>Now that you've successfully submitted and validated your project metadata, it's time to upload your 'raw' data to the Gen3 Commons.   The Gen3 commons utilize <a href="https://en.wikipedia.org/wiki/Object_storage">object storage</a>. <br />
+&nbsp;
+This page details how users gain and manage the credentials to access a project folder.   The <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/413158">following page</a> will detail submitting data to the project folder.   </p>
+<blockquote>
+<p>Why should we use command line to submit data instead of some kind of website?</p>
+<blockquote>
+<p>Because for transfer of large files or many files, there can be time-out issues, encryption issues, or corruption issues.   Using the command line ensures secure and complete transfer.</p>
+</blockquote>
+<p>NOTE:  if you only have small files and are uncomfortable operating on the command line, you may want to try using a GUI tool like <a href="https://cyberduck.io/">Cyberduck</a> to connect to S3 and manage your upload instead.  </p>
+</blockquote>
+<h3 id="obtain-s3-credentials">Obtain S3 credentials<a class="headerlink" href="#obtain-s3-credentials" title="Permanent link"></a></h3>
+<ol>
+<li>Go to https://bionimbus-pdc.opensciencedatacloud.org/storage/ Select and use the authentication method you gave in the <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/413153">data inventory form</a></li>
+<li>Download access keys by selecting the appropriate button next to the information for your username, e.g., under "Available BPA Datasets". The button is labeled “Generate S3 credential.” See Figure 1.</li>
+<li>Credentials appear as comma-separated values including an access key and a secret key. The secret key should remain secret.  Do not share these keys.</li>
+</ol>
+<blockquote>
+<p>NOTE:   Do not share the s3 credentials you gain below with anyone.  </p>
+<p>If you need to obtain new credentials, repeat steps (2.a) through (2.c). The button will now say “Rotate key” button, which will deactivate previous credentials and provide new ones.</p>
+</blockquote>
+<h3 id="figure-1">Figure 1<a class="headerlink" href="#figure-1" title="Permanent link"></a></h3>
+<p>${image?fileName=bionimbussubmit%2Epng&amp;align=None&amp;responsive=true}</p>
+<blockquote>
+<p>KNOWN ISSUE: Safari will not provide S3 credentials on the first try. After generating keys once, press the “Rotate key” button.</p>
+</blockquote>
+<h3 id="install-aws-cli">Install AWS CLI<a class="headerlink" href="#install-aws-cli" title="Permanent link"></a></h3>
+<h4 id="mac-osx-or-linuxunix">Mac OSX or Linux/Unix<a class="headerlink" href="#mac-osx-or-linuxunix" title="Permanent link"></a></h4>
+<p>Open your “Terminal” application and type the following command:</p>
+<pre><code>sudo apt-get install awscli
+</code></pre>
+
+<p>or</p>
+<pre><code>sudo easy_install awscli
+</code></pre>
+
+<p>If prompted, enter your device’s password.</p>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link"></a></h4>
+<p>Download and run one of the windows installers at: https://aws.amazon.com/cli/</p>
+<h3 id="configure-aws-cli-with-the-downloaded-project-credentials">Configure AWS CLI with the downloaded project credentials<a class="headerlink" href="#configure-aws-cli-with-the-downloaded-project-credentials" title="Permanent link"></a></h3>
+<p>In your “Terminal” application, type the line below, replacing “CREATE YOUR PROFILE NAME” with a profile name you create.</p>
+<pre><code>aws configure --profile &lt;CREATE YOUR PROFILE NAME&gt;
+</code></pre>
+
+<blockquote>
+<p><strong>Pro-tip:</strong>  Profile management will be very important as groups submit multiple projects.   Your downloaded s3 credentials only give you access to the project folder for which they are created.   If you are only submitting one project, you don't need profiles.   If you are submitting multiple, you will want to carefully pick project names for each project.   eg - P0001_T1 and P0002_T1. </p>
+<blockquote>
+<p>Some good sources on managing multiple profiles: 
+<em> OSX/Linux: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-multiple-profiles
+</em> Windows powershell: http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html</p>
+</blockquote>
+</blockquote>
+<p>After pressing Enter/Return, you will be prompted for your Access Key ID and Secret Access Key. These are the S3 credentials you downloaded earlier. Enter keys as prompted, pressing Enter/Return after each step.</p>
+<pre><code>AWS Access Key ID [****************]: 
+AWS Secret Access Key [****************]: 
+</code></pre>
+
+<p>Enter a default region name, as prompted - us-east-1. Press Enter/Return.</p>
+<pre><code>Default region name [None]: us-east-1
+</code></pre>
+
+<p>Press return at the final prompt.</p>
+<pre><code>Default output format [None]:
+</code></pre>
+
+<p>You should now be able to see the folder names in the bpa-data bucket.   </p>
+<pre><code>aws s3 ls s3://bpa-data/ --profile &lt;profilename&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

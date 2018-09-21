@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>4. Prepare metadata that fits the data model - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "4. Prepare metadata that fits the data model";
+    var mkdocs_page_input_path = "data-contribution/4-prep-meta.md";
+    var mkdocs_page_url = "/gen3-user-doc/data-contribution/4-prep-meta/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-analysis/">Data Analysis</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Appendices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api-gen3/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/timepoints/">Managing Timepoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>4. Prepare metadata that fits the data model</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="4-prepare-metadata-that-fits-the-data-model">4. Prepare metadata that fits the data model<a class="headerlink" href="#4-prepare-metadata-that-fits-the-data-model" title="Permanent link"></a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link"></a></h2>
+<p>Gen3 data contributors will need to prepare metadata for their submission in tab-separated value (tsv) files, login to a portal provided for submission, and upload and validate their metadata submission.   This is simultaneously the most challenging and crucial part of contributing data to a Gen3 commons.   This page details the preparation and ordering of the tsvs that will be submitted.   The next two pages cover submission virtual machine (VM) access and uploading and validating your metadata tsv submission.   </p>
+<h2 id="review-and-understand-the-data-model">Review and understand the data model<a class="headerlink" href="#review-and-understand-the-data-model" title="Permanent link"></a></h2>
+<p>Now that you have your project name, you can begin building out the rest of your metadata. Reference the most recent graph model of your commons at https://www.Gen3.org/data-group/ to help guide you on the necessary components in your submission. As you can see, from project you build up to experiment then to case and so on. For the properties that are allowed within this submission, please take some time to read through the dictionary schemas.   The raw schema can be found at: <link.to.schemas.Gen3.org>. Descriptions for each property as well as the valid submission values can be found in those schemas.
+&nbsp;
+Once you have <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/413159">access to submission portal, link to submission portal doc</a>, we recommend using the <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/424047">Data Dictionary Viewer, link to dict viewer</a> to review the schema and determine which properties best describe your submission.   This tool will help you understand the field types, requirements, and node dependencies for your submission.</p>
+<h2 id="create-your-tsvs">Create your TSVs<a class="headerlink" href="#create-your-tsvs" title="Permanent link"></a></h2>
+<p>&nbsp;
+It may be helpful to think of each TSV as a node in the graph of the data model.   Each node can have multiple components, for example a project could have multiple experiments in a node.<br />
+&nbsp;
+* Blank TSV templates can be found at https://www.synapse.org/#!Synapse:syn10268802
+    * Note there are wiki pages associated with each potential tsv or node in the templates.   They show example fields and information about data provenance.<br />
+    * Field types and limitations can be cleaned from a careful read of the associated yaml files at:  https://github.com/occ-data/bpadictionary/tree/develop/gdcdictionary/schemas  </p>
+<h2 id="determine-submission-order">Determine Submission Order<a class="headerlink" href="#determine-submission-order" title="Permanent link"></a></h2>
+<p>Before we discuss the actual submission process, we must first mention that the files must be submitted in a specific order. Once again referring back to the graph model at https://www.bloodpac.org/data-group, you cannot submit a node without submitting the nodes to which it points. 
+&nbsp;
+If you submit a file out of order, the validator will reject the submission on the basis that the dependency you point to (e.g. the read_groups.submitter_id in assay_result.tsv will be pointing to a node that doesn’t exist) is not present.   The Data Dictionary viewer can help you determine these dependencies.</p>
+<h2 id="sample-diagram-of-tsv-submission-order">Sample Diagram of TSV Submission Order<a class="headerlink" href="#sample-diagram-of-tsv-submission-order" title="Permanent link"></a></h2>
+<p>While this diagram represents an earlier version of the BloodPAC data model, the required submission logic for current versions of the model will be very similar.
+${image?fileName=blood%5Fatlas%5F010617%5Fmarkup%2Epng&amp;align=None&amp;responsive=true}</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
